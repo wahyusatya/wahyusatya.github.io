@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WS's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">WS Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Wahyu Satya</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Wahyu Satya profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Wahyu Satya</h1>
+        <p class="section__text__p2">Student at Undiksha</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/ws-cv-resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/wahyusatya/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/wahyusatya'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Interest</h3>
+              <p>AI <br />Data Science <br />Machine Learning <br />Deep Learning</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Universitas Pendidikan Ganesha<br />SMAN 2 Singaraja<br />SMPN 2 Singaraja<br />SDN 3 Banjar Jawa</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi, I'm Wahyu, I am an Information Systems Student at Ganesha University of Education. 
+              I am interested in data, how to process data, and others. I see that data will always be
+               used in all organizations anytime and anywhere. As a Data Science enthusiast, I am more interested in 
+               the python programming language because this language is not only simpler, but can also process 
+               various types of data easily. My interest in Data Science drives me to always be able to analyze all case studies, 
+               creating a better, concrete conclusion.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+   <section id="experience">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Experience</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container">
+        <div class="article-container">
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - PAT x Tweak#9</h3>
+              <p>Members of the Competition Committee</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - U-Tech 2024</h3>
+              <p>Secretary of the Competition Committee</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - Community Service Committee in SMA Negeri Bali Mandara</h3>
+              <p>Videographer & Documentary Video Editor</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - OKF-ID 2024</h3>
+              <p>Member of the Assignment Committee</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - BEM FTK Basic Leadership Training</h3>
+              <p>Member of the Consumption and Spirituality Committee</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - Integrity Pact Agreement, ZI-WBK Faculty of Engineering and Vocational</h3>
+              <p>Member of Public Relations Committee</p>
+            </div>
+          </article>
+          <article>
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - BEM FTK Working Meeting for the 2024/2025 Service Period</h3>
+              <p>Member of Public Relations Committee</p>
+            </div>
+          </article>
+          <article class="center-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2024 - BEM FTK 2024/2025 Service Period</h3>
+              <p>Social Service Division Staff, Department of Social Community</p>
+            </div>
+          </article>
+          <article class="center-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div>
+              <h3>2023 - Tweak#8</h3>
+              <p>Members of the Competition Committee</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#projects'"
+  />
+</section>
+    <section id="projects">
+  <p class="section__text__p1">Browse My Top 3</p>
+  <h1 class="title">Certifications</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/certi-1.png"
+            alt="Certification 1"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Data Science - IBM</h2>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/certi-2.png"
+            alt="Certification 2"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Python for Data Science - Belajar Skill</h2>
+      </div>
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/certi-3.png"
+            alt="Certification 3"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">MySQL - HackerRank</h2>
+      </div>
+    </div>
+  </div>
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#contact'"
+  />
+</section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:satyagiridharma@gmail.com">satyagiridharma@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/wahyusatya/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Wahyu Satya. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

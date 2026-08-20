@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Database, Brain, Sparkles, Terminal, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Code2, Database, Brain, Sparkles, Terminal, CheckCircle2, ArrowRight, MapPin, GraduationCap } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
 type TabType = 'web' | 'data' | 'research';
@@ -89,14 +89,75 @@ export const AboutSection: React.FC = () => {
             INSPECTOR // IDENTITY & PERSPECTIVE
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-text tracking-tight">
-            Who I Am & How I Build
+            About Wahyu Satya
           </h2>
           <p className="text-sm text-slate-muted max-w-2xl font-sans">
-            An interactive inspection across web systems architecture, statistical data pipelines, and deep learning research by Wahyu Satya.
+            Personal identity dossier, engineering perspective, and interactive exploration of core disciplines.
           </p>
         </div>
 
-        {/* Interactive WHOAMI Terminal Interface */}
+        {/* 1. RESTORED PERSONAL PROFILE & IDENTITY CARD */}
+        <div className="p-6 sm:p-8 rounded-lg bg-bg-surface border border-hairline mb-12 flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 shadow-xl">
+          {/* Profile Photo */}
+          <div className="shrink-0 relative">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-lg overflow-hidden border border-hairline bg-bg-ground shadow-md">
+              <img
+                src="./assets/about-pic.png"
+                alt="Wahyu Satya"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="absolute -bottom-2 -right-2 px-2 py-0.5 rounded bg-bg-dark border border-hairline font-mono text-[10px] text-accent-primary">
+              ID: WAHYU SATYA
+            </div>
+          </div>
+
+          {/* Profile Bio Details */}
+          <div className="space-y-3 flex-grow text-center md:text-left">
+            <div className="space-y-1">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-text font-sans">
+                  Putu Wahyu Satya Giridharma
+                </h3>
+                <span className="font-mono text-xs text-accent-primary font-medium">(Wahyu Satya)</span>
+              </div>
+              <p className="font-mono text-xs sm:text-sm text-slate-text font-semibold">
+                Web Developer • Data Scientist • Deep Learning Researcher
+              </p>
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans max-w-3xl">
+              I build interactive web experiences, data-driven systems, and intelligent ML solutions. My research focuses on ECG classification using pure 1D Vision Transformers with anatomically informed lead grouping.
+            </p>
+
+            {/* Academic Affiliation & Location Strip */}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 font-mono text-xs text-slate-dim pt-1 border-t border-hairline/40">
+              <div className="flex items-center gap-1.5">
+                <GraduationCap className="w-3.5 h-3.5 text-accent-primary" />
+                <span>Universitas Pendidikan Ganesha (B.Sc Information Systems)</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-accent-primary" />
+                <span>Singaraja, Bali, Indonesia</span>
+              </div>
+            </div>
+
+            {/* Core Competency & Interest Tags */}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 pt-1">
+              {PORTFOLIO_DATA.personal.interests.map((interest) => (
+                <span
+                  key={interest}
+                  className="font-mono text-[10px] px-2.5 py-0.5 rounded bg-bg-ground border border-hairline/60 text-slate-dim"
+                >
+                  {interest}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* 2. INTERACTIVE WHOAMI TERMINAL INTERFACE */}
         <div className="rounded-lg bg-bg-surface border border-hairline overflow-hidden mb-16 shadow-2xl">
           {/* Terminal Window Top Bar */}
           <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-bg-ground border-b border-hairline font-mono text-xs">
@@ -206,7 +267,7 @@ export const AboutSection: React.FC = () => {
           </div>
         </div>
 
-        {/* How I Think (Three Core Principles: Build, Measure, Explore) */}
+        {/* 3. HOW I THINK (Three Core Principles: Build, Measure, Explore) */}
         <div className="space-y-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-accent-primary uppercase tracking-widest">

@@ -1,14 +1,14 @@
 import React from 'react';
-import jsIcon from '../../../assets/ToolChain/JS ES6.png';
-import pythonIcon from '../../../assets/ToolChain/Python.png';
-import pytorchIcon from '../../../assets/ToolChain/Pytorch.png';
-import anacondaIcon from '../../../assets/ToolChain/Anaconda.png';
-import gitIcon from '../../../assets/ToolChain/Git.png';
-import postgresIcon from '../../../assets/ToolChain/PostgreSQL.png';
-import laragonIcon from '../../../assets/ToolChain/Laragon.png';
-import mongoIcon from '../../../assets/ToolChain/MongoDB.png';
-import reactIcon from '../../../assets/ToolChain/React.png';
-import dockerIcon from '../../../assets/ToolChain/Docker.png';
+import jsIcon from '../../../public/assets/ToolChain/JS ES6.png';
+import pythonIcon from '../../../public/assets/ToolChain/Python.png';
+import pytorchIcon from '../../../public/assets/ToolChain/Pytorch.png';
+import anacondaIcon from '../../../public/assets/ToolChain/Anaconda.png';
+import gitIcon from '../../../public/assets/ToolChain/Git.png';
+import postgresIcon from '../../../public/assets/ToolChain/PostgreSQL.png';
+import laragonIcon from '../../../public/assets/ToolChain/Laragon.png';
+import mongoIcon from '../../../public/assets/ToolChain/MongoDB.png';
+import reactIcon from '../../../public/assets/ToolChain/React.png';
+import dockerIcon from '../../../public/assets/ToolChain/Docker.png';
 
 interface ToolChainItem {
   name: string;

@@ -15,14 +15,14 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
               <span className="font-mono font-bold text-sm text-slate-text">
-                ASH
+                WAHYU SATYA
               </span>
               <span className="font-mono text-xs text-slate-dim">
                 / RESEARCH LAB & SYSTEMS
               </span>
             </div>
             <p className="text-xs text-slate-muted max-w-sm leading-relaxed">
-              Synthesizing deep learning computer vision architectures, statistical data pipelines, and deterministic web engineering.
+              Synthesizing 1D-ViT biosignal research, statistical data science, and high-performance interactive web engineering.
             </p>
             <div className="font-mono text-[11px] text-slate-dim pt-1">
               Singaraja, Bali, Indonesia • Universitas Pendidikan Ganesha
@@ -35,12 +35,12 @@ export const Footer: React.FC = () => {
               Index
             </div>
             <ul className="space-y-1.5 text-slate-muted">
-              <li><a href="#overview" className="hover:text-slate-text transition-colors">01 / Overview</a></li>
-              <li><a href="#about" className="hover:text-slate-text transition-colors">02 / About & Focus</a></li>
-              <li><a href="#research" className="hover:text-slate-text transition-colors">03 / Research Systems</a></li>
-              <li><a href="#stack" className="hover:text-slate-text transition-colors">04 / Technical Stack</a></li>
-              <li><a href="#credentials" className="hover:text-slate-text transition-colors">05 / Credentials</a></li>
-              <li><a href="#timeline" className="hover:text-slate-text transition-colors">06 / Timeline</a></li>
+              <li><a href="#about" className="hover:text-slate-text transition-colors">01 / About & Focus</a></li>
+              <li><a href="#work" className="hover:text-slate-text transition-colors">02 / Selected Work</a></li>
+              <li><a href="#research" className="hover:text-slate-text transition-colors">03 / ECG 1D-ViT Research</a></li>
+              <li><a href="#lab" className="hover:text-slate-text transition-colors">04 / Signal Playground</a></li>
+              <li><a href="#stack" className="hover:text-slate-text transition-colors">05 / Technical Stack</a></li>
+              <li><a href="#timeline" className="hover:text-slate-text transition-colors">06 / Evolution & Timeline</a></li>
             </ul>
           </div>
 
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Colophon */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-dim font-mono">
-          <p>© {new Date().getFullYear()} Ash. Static Frontend Architecture (React 19, TypeScript, Tailwind).</p>
+          <p>© {new Date().getFullYear()} Putu Wahyu Satya Giridharma. Static Frontend Architecture (React 19, TypeScript, Tailwind).</p>
           <button
             onClick={scrollToTop}
             className="flex items-center gap-1.5 text-slate-muted hover:text-slate-text transition-colors cursor-pointer"

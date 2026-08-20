@@ -55,14 +55,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
       role="banner"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between gap-4">
-        {/* Brand: ASH */}
+        {/* Brand: WAHYU SATYA */}
         <a
           href="#"
           className="flex items-center gap-2 group focus-visible:ring-2 focus-visible:ring-accent-primary rounded"
-          aria-label="Ash Home"
+          aria-label="Wahyu Satya Home"
         >
           <span className="font-mono font-bold text-sm tracking-tight text-slate-text group-hover:text-accent-primary transition-colors">
-            ASH
+            WAHYU SATYA
           </span>
         </a>
 

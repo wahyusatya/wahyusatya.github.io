@@ -33,7 +33,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <p className="text-sm sm:text-base text-slate-muted leading-relaxed max-w-xl font-sans">
-              Specializing in empirical neural vision architectures in PyTorch, reproducible statistical data modeling, and deterministic frontend web craft. Synthesizing mathematical precision with production-grade engineering.
+              Hello, I'm <strong className="text-slate-text font-semibold">Wahyu Satya</strong>. I build interactive web experiences, data-driven systems, and intelligent ML solutions. My research focuses on ECG classification using pure 1D Vision Transformers with anatomically informed lead grouping.
             </p>
 
             {/* CTAs */}

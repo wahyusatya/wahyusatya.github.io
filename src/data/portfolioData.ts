@@ -58,10 +58,11 @@ export interface SkillItem {
 
 export const PORTFOLIO_DATA = {
   personal: {
-    name: 'Ash',
-    fullName: 'Putu Wahyu Satya Giridharma (Ash)',
+    name: 'Wahyu Satya',
+    fullName: 'Putu Wahyu Satya Giridharma',
     role: 'Web Developer • Data Scientist • Deep Learning Researcher',
-    focus: 'Neural Vision Architectures & High-Performance Web Systems',
+    focus: 'ECG Classification using 1D-ViT & Interactive Data-Driven Systems',
+    mission: 'I build interactive web experiences, data-driven systems, and intelligent ML solutions.',
     institution: 'Universitas Pendidikan Ganesha (Undiksha)',
     department: 'Information Systems',
     status: 'Available for Engineering Roles & Research Collaboration',
@@ -71,6 +72,17 @@ export const PORTFOLIO_DATA = {
     resumePdf: './assets/ws-cv-resume.pdf',
     profileImg: './assets/profile-pic.png',
     aboutImg: './assets/about-pic.png',
+    interests: [
+      'Web Development',
+      'Python',
+      'Data Science',
+      'Machine Learning',
+      'Deep Learning',
+      'Computer Vision',
+      'Transformers',
+      'Time-Series Data',
+      'Data Visualization'
+    ],
   },
 
   academic: [

@@ -56,14 +56,15 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
 • sudo        - Request root administrative privilege
 • resume / cv - Download official Curriculum Vitae PDF
 • clear       - Reset output buffer`);
-      } else if (['whoami', 'ash', 'investigator'].includes(cmd)) {
-        setOutput(`USER: Ash (Putu Wahyu Satya Giridharma)
+      } else if (['whoami', 'wahyu', 'satya', 'investigator', 'ash'].includes(cmd)) {
+        setOutput(`USER: Putu Wahyu Satya Giridharma (Wahyu Satya)
 ROLE: Web Developer • Data Scientist • Deep Learning Researcher
 AFFILIATION: Universitas Pendidikan Ganesha (B.Sc Information Systems)
 LAB LOCALE: Singaraja, Bali, Indonesia (UTC+8)
-FOCUS: 1D Vision Transformers, Anomaly Segmentation, Deterministic Web Engines`);
+FOCUS: ECG Classification using pure 1D-ViT with Anatomical Lead Grouping
+INTERESTS: Web Development, Python, Data Science, Machine Learning, Deep Learning, Computer Vision, Transformers, Time-Series Data, Data Visualization`);
       } else if (cmd === 'sudo') {
-        setOutput(`[ACCESS DENIED] Ash is the sole root investigator. Nice try! ;)`);
+        setOutput(`[ACCESS DENIED] Wahyu Satya is the sole root investigator. Nice try! ;)`);
       } else if (cmd === 'matrix') {
         setOutput(`[TENSOR STREAM]:
 [ 0.892, 0.941, 0.986 ] -> 1D-ViT (P=16) -> Attn(Q,K,V) = softmax(QK^T / sqrt(d)) * V

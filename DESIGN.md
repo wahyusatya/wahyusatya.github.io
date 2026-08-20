@@ -1,6 +1,6 @@
 ---
-name: Ash Research Lab & Systems Engineering Portfolio
-description: Dark-first, editorial technical design system for Ash (Web Developer, Data Scientist, Deep Learning Researcher)
+name: Wahyu Satya Research Lab & Systems Engineering Portfolio
+description: Dark-first, editorial technical design system for Wahyu Satya (Web Developer, Data Scientist, Deep Learning Researcher)
 colors:
   bg-dark: "#090a0d"
   bg-ground: "#0d0f14"

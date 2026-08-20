@@ -25,16 +25,16 @@ export const AboutSection: React.FC = () => {
     {
       id: 'web',
       label: 'WEB',
-      badge: 'Frontend Systems',
-      command: 'whoami --domain=web-engineering',
-      title: 'High-Craft Frontend Engineering & Interactive Interfaces',
+      badge: 'Frontend & Interactive Systems',
+      command: 'whoami --domain=web-development',
+      title: 'High-Craft Frontend Engineering & Interactive Experiences',
       narrative:
-        'Engineering deterministic, zero-jank web architectures with React 19, TypeScript, and modern CSS. I specialize in building dense technical visualizations, accessible component trees, and resilient client-side systems that remain lightning fast across all viewports.',
+        'Engineering deterministic, zero-jank web experiences with React 19, TypeScript, and modern CSS architectures. I specialize in building data visualization tools, dense technical canvas engines, accessible component trees, and resilient client-side systems that remain fluid across all viewports.',
       stack: ['React 19', 'TypeScript', 'Tailwind CSS', 'HTML5 Canvas / SVG', 'Vite', 'Framer Motion'],
       principles: [
         'Deterministic state & strict type contracts',
         'Sub-millisecond interactive responsiveness',
-        'Zero layout shifts (CLS: 0.00)',
+        'Rich data visualizations & canvas telemetry',
         'Semantic keyboard accessibility (WCAG AA)',
       ],
       outputName: 'SynapseFlow Canvas Visualizer Engine',
@@ -43,11 +43,11 @@ export const AboutSection: React.FC = () => {
     {
       id: 'data',
       label: 'DATA',
-      badge: 'Statistical ML & Pipelines',
+      badge: 'Python & Statistical Data Science',
       command: 'whoami --domain=data-science',
       title: 'Statistical Modeling, Data Pipelines & Relational Schemas',
       narrative:
-        'Constructing end-to-end data workflows in Python. From exploratory data wrangling, missing-value imputation, and statistical feature engineering in Pandas/NumPy to normalized relational SQL schema design and predictive ensemble modeling in Scikit-learn.',
+        'Constructing end-to-end data-driven workflows in Python. From exploratory data analysis (EDA), longitudinal data imputation, and statistical feature engineering in Pandas/NumPy to normalized relational SQL schema design and predictive ensemble modeling in Scikit-learn.',
       stack: ['Python 3.11+', 'Pandas', 'NumPy', 'Scikit-learn', 'MySQL', 'PostgreSQL', 'MongoDB'],
       principles: [
         'Rigorous exploratory data analysis (EDA)',
@@ -61,20 +61,20 @@ export const AboutSection: React.FC = () => {
     {
       id: 'research',
       label: 'RESEARCH',
-      badge: 'Deep Learning & Vision',
-      command: 'whoami --domain=deep-learning',
-      title: 'Neural Vision Architectures & 1D-ViT Time-Series Modeling',
+      badge: 'Deep Learning & 1D-ViT',
+      command: 'whoami --domain=deep-learning-research',
+      title: '1D Vision Transformers & Biomedical Time-Series Modeling',
       narrative:
-        'Investigating deep learning architectures in PyTorch with a focus on computer vision and electrocardiac signal processing. Currently researching 1D Vision Transformers (1D-ViT) for real-time arrhythmia anomaly classification, convolutional encoder-decoders (ResNet + U-Net), and custom loss optimization.',
+        'Investigating deep learning architectures in PyTorch with a primary focus on continuous biosignal time-series and computer vision. My core research focuses on ECG classification using pure 1D Vision Transformers with anatomically informed lead grouping, evaluating PTB-XL and Chapman-Shaoxing cohorts under domain distribution shift.',
       stack: ['PyTorch', 'TorchVision', '1D-ViT', 'ResNet-50 / U-Net', 'CUDA / GPU Compute', 'Scipy Signal'],
       principles: [
-        'Patch tokenization for 1D biological signals',
+        'Anatomically informed 1D lead grouping',
         'Multi-head self-attention feature extraction',
-        'Skip-connection spatial preservation',
-        'Empirical ablation & convergence logging',
+        'Convolutional decoders & spatial preservation',
+        'Cross-dataset generalizability & ablation rigor',
       ],
-      outputName: 'Deep Vision Anomaly Segmentation & ECG 1D-ViT',
-      outputMetric: 'mIoU: 0.892 (Validation Cohort)',
+      outputName: 'Anatomically Grouped 1D-ViT for ECG Classification',
+      outputMetric: 'PTB-XL + Chapman-Shaoxing Cohorts',
     },
   ];
 
@@ -92,7 +92,7 @@ export const AboutSection: React.FC = () => {
             Who I Am & How I Build
           </h2>
           <p className="text-sm text-slate-muted max-w-2xl font-sans">
-            An interactive inspection across web systems architecture, statistical data pipelines, and deep learning research.
+            An interactive inspection across web systems architecture, statistical data pipelines, and deep learning research by Wahyu Satya.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export const AboutSection: React.FC = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-hairline/80 border border-white/10" />
               </div>
               <div className="flex items-center gap-1.5 text-slate-dim text-[11px]">
-                <span className="text-accent-primary">ash@lab</span>
+                <span className="text-accent-primary">wahyusatya@lab</span>
                 <span>:</span>
                 <span className="text-slate-muted">~$</span>
                 <span className="text-slate-text">{currentTab.command}</span>
@@ -271,7 +271,7 @@ export const AboutSection: React.FC = () => {
           <div className="flex items-center gap-2 text-[11px]">
             <span>LOCATION: BALI, INDONESIA</span>
             <span className="text-hairline">|</span>
-            <span className="text-accent-primary">ASH RESEARCH LAB</span>
+            <span className="text-accent-primary">WAHYU SATYA LAB</span>
           </div>
         </div>
       </div>

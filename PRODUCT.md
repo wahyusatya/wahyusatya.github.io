@@ -10,13 +10,13 @@ web
 React 19 + TypeScript + Vite + Tailwind CSS (Static frontend-only build for GitHub Pages, zero backend/database)
 
 ## Users
-Research scientists, engineering leads, tech recruiters, and academic collaborators evaluating Ash for roles and research collaborations across Web Engineering, Data Science, and Deep Learning.
+Research scientists, engineering leads, tech recruiters, and academic collaborators evaluating Wahyu Satya for roles and research collaborations across Web Development, Data Science, and Deep Learning.
 
 ## Product Purpose
-Establish a world-class Research Lab & Systems Engineering portfolio for Ash that presents deep learning architectures, web systems, empirical research, and verified technical credentials with rigorous editorial clarity and understated technical elegance.
+Establish a world-class Research Lab & Systems Engineering portfolio for Wahyu Satya that presents deep learning architectures, web systems, empirical research, and verified technical credentials with rigorous editorial clarity and understated technical elegance.
 
 ## Positioning
-Ash — Web Developer, Data Scientist, and Deep Learning Researcher. Bridging rigorous machine learning research with deterministic web systems architecture. Completely devoid of generic portfolio cliches, excessive neon gradients, or artificial AI brain graphics.
+Wahyu Satya — Web Developer, Data Scientist, and Deep Learning Researcher. Bridging rigorous machine learning research with deterministic web systems architecture. Completely devoid of generic portfolio cliches, excessive neon gradients, or artificial AI brain graphics.
 
 ## Operating Context
 Accessed on desktop and mobile viewports by engineering evaluators seeking dense, verifiable proof of technical competence, publication-grade research clarity, and pristine frontend craftsmanship.

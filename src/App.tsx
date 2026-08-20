@@ -4,6 +4,7 @@ import { CursorGlow } from './components/ui/CursorGlow';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HeroSection } from './components/sections/HeroSection';
+import { TechMarquee } from './components/sections/TechMarquee';
 import { AboutSection } from './components/sections/AboutSection';
 import { NeuralLabSection } from './components/sections/NeuralLabSection';
 import { SkillsMatrixSection } from './components/sections/SkillsMatrixSection';
@@ -28,6 +29,7 @@ export function App() {
         {/* Main Content Sections */}
         <main className="relative z-10">
           <HeroSection />
+          <TechMarquee />
           <AboutSection />
           <NeuralLabSection />
           <SkillsMatrixSection />

@@ -53,3 +53,26 @@
     @apply bg-bg-elevated/90 backdrop-blur-lg border border-white/15 shadow-elevated;
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-duration: 90s;
+  }
+}
+

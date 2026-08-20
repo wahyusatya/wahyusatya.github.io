@@ -1,4 +1,14 @@
 import React from 'react';
+import jsIcon from '../../../assets/ToolChain/JS ES6.png';
+import pythonIcon from '../../../assets/ToolChain/Python.png';
+import pytorchIcon from '../../../assets/ToolChain/Pytorch.png';
+import anacondaIcon from '../../../assets/ToolChain/Anaconda.png';
+import gitIcon from '../../../assets/ToolChain/Git.png';
+import postgresIcon from '../../../assets/ToolChain/PostgreSQL.png';
+import laragonIcon from '../../../assets/ToolChain/Laragon.png';
+import mongoIcon from '../../../assets/ToolChain/MongoDB.png';
+import reactIcon from '../../../assets/ToolChain/React.png';
+import dockerIcon from '../../../assets/ToolChain/Docker.png';
 
 interface ToolChainItem {
   name: string;
@@ -10,52 +20,52 @@ export const TechMarquee: React.FC = () => {
   const toolChain: ToolChainItem[] = [
     {
       name: 'JavaScript (ES6+)',
-      image: './assets/ToolChain/JS%20ES6.png',
+      image: jsIcon,
       url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     },
     {
       name: 'Python',
-      image: './assets/ToolChain/Python.png',
+      image: pythonIcon,
       url: 'https://www.python.org/',
     },
     {
       name: 'PyTorch',
-      image: './assets/ToolChain/Pytorch.png',
+      image: pytorchIcon,
       url: 'https://pytorch.org/',
     },
     {
       name: 'Anaconda',
-      image: './assets/ToolChain/Anaconda.png',
+      image: anacondaIcon,
       url: 'https://www.anaconda.com/',
     },
     {
       name: 'Git',
-      image: './assets/ToolChain/Git.png',
+      image: gitIcon,
       url: 'https://git-scm.com/',
     },
     {
       name: 'PostgreSQL',
-      image: './assets/ToolChain/PostgreSQL.png',
+      image: postgresIcon,
       url: 'https://www.postgresql.org/',
     },
     {
       name: 'Laragon',
-      image: './assets/ToolChain/Laragon.png',
+      image: laragonIcon,
       url: 'https://laragon.org/',
     },
     {
       name: 'MongoDB',
-      image: './assets/ToolChain/MongoDB.png',
+      image: mongoIcon,
       url: 'https://www.mongodb.com/',
     },
     {
       name: 'React',
-      image: './assets/ToolChain/React.png',
+      image: reactIcon,
       url: 'https://react.dev/',
     },
     {
       name: 'Docker',
-      image: './assets/ToolChain/Docker.png',
+      image: dockerIcon,
       url: 'https://www.docker.com/',
     },
   ];

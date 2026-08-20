@@ -74,30 +74,30 @@ export const TechMarquee: React.FC = () => {
   const doubleList = [...toolChain, ...toolChain];
 
   return (
-    <section className="relative py-8 sm:py-12 overflow-hidden border-y border-white/5 bg-bg-deep/40 backdrop-blur-sm">
+    <section className="py-8 overflow-hidden border-b border-hairline bg-bg-ground/50">
       {/* Marquee Container with Gradient Edge Fades */}
       <div className="relative w-full overflow-hidden marquee-container group">
         {/* Left Gradient Edge Fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-bg-dark to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-bg-dark to-transparent z-10 pointer-events-none" />
         
         {/* Right Gradient Edge Fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-bg-dark to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-bg-dark to-transparent z-10 pointer-events-none" />
 
         {/* Animated Scrolling Track */}
-        <div className="flex items-center gap-10 sm:gap-16 md:gap-20 w-max animate-marquee group-hover:[animation-play-state:paused]">
+        <div className="flex items-center gap-12 sm:gap-16 w-max animate-marquee group-hover:[animation-play-state:paused]">
           {doubleList.map((item, index) => (
             <a
               key={`${item.name}-${index}`}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              title={`${item.name} — Visit Official Site`}
-              className="flex items-center justify-center p-2 transition-all duration-300 transform hover:scale-125 hover:drop-shadow-[0_0_25px_rgba(6,182,212,0.65)] cursor-pointer select-none shrink-0 opacity-85 hover:opacity-100"
+              title={`${item.name} — Official Documentation`}
+              className="flex items-center justify-center p-2 opacity-75 hover:opacity-100 hover:scale-110 transition-all duration-200 cursor-pointer select-none shrink-0"
             >
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-md"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 loading="lazy"
               />
             </a>

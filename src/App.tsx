@@ -1,54 +1,52 @@
 import React, { useState } from 'react';
 import { ToastProvider } from './components/ui/ToastContext';
-import { CursorGlow } from './components/ui/CursorGlow';
+import { ThemeProvider } from './components/ui/ThemeContext';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HeroSection } from './components/sections/HeroSection';
 import { TechMarquee } from './components/sections/TechMarquee';
 import { AboutSection } from './components/sections/AboutSection';
-import { NeuralLabSection } from './components/sections/NeuralLabSection';
-import { SkillsMatrixSection } from './components/sections/SkillsMatrixSection';
 import { ResearchProjectsSection } from './components/sections/ResearchProjectsSection';
+import { ResearchSection } from './components/sections/ResearchSection';
+import { SignalPlaygroundSection } from './components/sections/SignalPlaygroundSection';
+import { SkillsMatrixSection } from './components/sections/SkillsMatrixSection';
 import { CertificationsSection } from './components/sections/CertificationsSection';
 import { ExperienceSection } from './components/sections/ExperienceSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { CommandPalette } from './components/ui/CommandPalette';
 
 export function App() {
-  const [terminalOpen, setTerminalOpen] = useState(false);
+  const [cmdOpen, setCmdOpen] = useState(false);
 
   return (
-    <ToastProvider>
-      <div className="relative min-h-screen bg-bg-dark text-slate-100 font-sans selection:bg-cyan-primary/30 selection:text-white">
-        {/* Ambient Cursor Glow Follower */}
-        <CursorGlow />
+    <ThemeProvider>
+      <ToastProvider>
+        <div className="min-h-screen bg-bg-dark text-slate-text font-sans antialiased selection:bg-accent-primary/25 selection:text-white transition-colors duration-200">
+          {/* Sticky Minimal Navbar */}
+          <Navbar onOpenCommandPalette={() => setCmdOpen(true)} />
 
-        {/* Top Navbar */}
-        <Navbar onOpenTerminal={() => setTerminalOpen(true)} />
+          {/* Main Content Stream */}
+          <main role="main">
+            <HeroSection />
+            <TechMarquee />
+            <AboutSection />
+            <ResearchProjectsSection />
+            <ResearchSection />
+            <SignalPlaygroundSection />
+            <SkillsMatrixSection />
+            <CertificationsSection />
+            <ExperienceSection />
+            <ContactSection />
+          </main>
 
-        {/* Main Content Sections */}
-        <main className="relative z-10">
-          <HeroSection />
-          <TechMarquee />
-          <AboutSection />
-          <NeuralLabSection />
-          <SkillsMatrixSection />
-          <ResearchProjectsSection />
-          <CertificationsSection />
-          <ExperienceSection />
-          <ContactSection />
-        </main>
+          {/* Footer */}
+          <Footer />
 
-        {/* Footer */}
-        <Footer />
-
-        {/* Terminal HUD & Command Palette (Ctrl+K) */}
-        <CommandPalette
-          isOpen={terminalOpen}
-          onClose={() => setTerminalOpen(false)}
-        />
-      </div>
-    </ToastProvider>
+          {/* Command Palette Modal (Ctrl+K / Cmd+K) */}
+          <CommandPalette isOpen={cmdOpen} onClose={() => setCmdOpen(false)} />
+        </div>
+      </ToastProvider>
+    </ThemeProvider>
   );
 }
 

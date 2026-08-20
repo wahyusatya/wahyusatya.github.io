@@ -1,110 +1,90 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
 export const Footer: React.FC = () => {
-  const [timeString, setTimeString] = useState('--:--:--');
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: 'Asia/Makassar',
-        hour12: false,
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-      };
-      setTimeString(`${now.toLocaleTimeString('en-US', options)} WITA`);
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="relative bg-bg-deep border-t border-white/10 pt-16 pb-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+    <footer className="bg-bg-dark border-t border-hairline py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-hairline/60">
           {/* Brand Col */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-xs text-cyan-glow bg-cyan-primary/10 border border-cyan-primary/30 px-2 py-1 rounded-md">
-                &lt;WS /&gt;
+              <span className="font-mono font-bold text-sm text-slate-text">
+                ASH
               </span>
-              <span className="font-bold text-slate-100 text-lg">
-                {PORTFOLIO_DATA.personal.name}
+              <span className="font-mono text-xs text-slate-dim">
+                / RESEARCH LAB & SYSTEMS
               </span>
             </div>
-            <p className="text-sm text-slate-400 max-w-md leading-relaxed">
-              Bridging the gap between computational deep learning research and modern high-performance web architecture.
+            <p className="text-xs text-slate-muted max-w-sm leading-relaxed">
+              Synthesizing deep learning computer vision architectures, statistical data pipelines, and deterministic web engineering.
             </p>
-            <div className="font-mono text-xs text-cyan-glow flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-primary animate-pulse" />
-              <span>Singaraja, Bali (UTC+8) • {timeString}</span>
+            <div className="font-mono text-[11px] text-slate-dim pt-1">
+              Singaraja, Bali, Indonesia • Universitas Pendidikan Ganesha
             </div>
           </div>
 
           {/* Nav Jumps */}
-          <div>
-            <h4 className="font-mono text-xs uppercase font-bold text-slate-200 tracking-wider mb-3">
-              Navigation
-            </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li><a href="#about" className="hover:text-cyan-glow transition-colors">About Overview</a></li>
-              <li><a href="#lab" className="hover:text-cyan-glow transition-colors">Neural Lab Sandbox</a></li>
-              <li><a href="#skills" className="hover:text-cyan-glow transition-colors">Skills Matrix</a></li>
-              <li><a href="#projects" className="hover:text-cyan-glow transition-colors">Research Projects</a></li>
-              <li><a href="#certifications" className="hover:text-cyan-glow transition-colors">Certifications</a></li>
+          <div className="space-y-3 font-mono text-xs">
+            <div className="text-slate-text uppercase tracking-wider text-[11px]">
+              Index
+            </div>
+            <ul className="space-y-1.5 text-slate-muted">
+              <li><a href="#overview" className="hover:text-slate-text transition-colors">01 / Overview</a></li>
+              <li><a href="#about" className="hover:text-slate-text transition-colors">02 / About & Focus</a></li>
+              <li><a href="#research" className="hover:text-slate-text transition-colors">03 / Research Systems</a></li>
+              <li><a href="#stack" className="hover:text-slate-text transition-colors">04 / Technical Stack</a></li>
+              <li><a href="#credentials" className="hover:text-slate-text transition-colors">05 / Credentials</a></li>
+              <li><a href="#timeline" className="hover:text-slate-text transition-colors">06 / Timeline</a></li>
             </ul>
           </div>
 
           {/* Socials & Verified Links */}
-          <div>
-            <h4 className="font-mono text-xs uppercase font-bold text-slate-200 tracking-wider mb-3">
-              Verified Links
-            </h4>
-            <div className="space-y-2.5">
+          <div className="space-y-3 font-mono text-xs">
+            <div className="text-slate-text uppercase tracking-wider text-[11px]">
+              Connect
+            </div>
+            <div className="space-y-2">
               <a
                 href={PORTFOLIO_DATA.personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                className="flex items-center gap-2 text-slate-muted hover:text-slate-text transition-colors"
               >
-                <Github className="w-4 h-4" />
-                <span>GitHub Workspace</span>
+                <Github className="w-3.5 h-3.5" />
+                <span>GitHub</span>
               </a>
               <a
                 href={PORTFOLIO_DATA.personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                className="flex items-center gap-2 text-slate-muted hover:text-slate-text transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
-                <span>LinkedIn Network</span>
+                <Linkedin className="w-3.5 h-3.5" />
+                <span>LinkedIn</span>
               </a>
               <a
                 href={`mailto:${PORTFOLIO_DATA.personal.email}`}
-                className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-100 transition-colors"
+                className="flex items-center gap-2 text-slate-muted hover:text-slate-text transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-3.5 h-3.5" />
                 <span>Direct Email</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
-          <p>© {new Date().getFullYear()} Wahyu Satya. React 19 • Three.js • Vite • Tailwind.</p>
+        {/* Bottom Colophon */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-dim font-mono">
+          <p>© {new Date().getFullYear()} Ash. Static Frontend Architecture (React 19, TypeScript, Tailwind).</p>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-slate-400 hover:text-cyan-glow transition-colors"
+            className="flex items-center gap-1.5 text-slate-muted hover:text-slate-text transition-colors cursor-pointer"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

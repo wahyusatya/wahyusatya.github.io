@@ -7,41 +7,40 @@
 web
 
 ## Stack
-React 19 + TypeScript + Vite + Tailwind CSS + Framer Motion + Three.js (3D WebGL Neural Topology, GPU-accelerated shaders, instant static build for GitHub Pages)
+React 19 + TypeScript + Vite + Tailwind CSS (Static frontend-only build for GitHub Pages, zero backend/database)
 
 ## Users
-Recruiters, engineering managers, AI/ML research leads, academic collaborators, and tech clients evaluating Wahyu Satya for Senior Web Development, AI/Deep Learning Research, and Data Science engineering roles or collaborative projects.
+Research scientists, engineering leads, tech recruiters, and academic collaborators evaluating Ash for roles and research collaborations across Web Engineering, Data Science, and Deep Learning.
 
 ## Product Purpose
-Deliver an exceptional, high-craft, deeply interactive, and distinctive personal portfolio that demonstrates Wahyu Satya's dual mastery: production-grade modern web development and rigorous deep learning / data science research.
+Establish a world-class Research Lab & Systems Engineering portfolio for Ash that presents deep learning architectures, web systems, empirical research, and verified technical credentials with rigorous editorial clarity and understated technical elegance.
 
 ## Positioning
-The synthesis of computational deep learning intelligence and state-of-the-art interactive frontend engineering. Moving beyond generic template cards to deliver mathematical precision, live tensor/neural network interactive visualizations, real-time code/research demonstrations, and fluid motion typography.
+Ash — Web Developer, Data Scientist, and Deep Learning Researcher. Bridging rigorous machine learning research with deterministic web systems architecture. Completely devoid of generic portfolio cliches, excessive neon gradients, or artificial AI brain graphics.
 
 ## Operating Context
-Browsed on modern desktop monitors, laptop screens, and mobile devices by technical leaders and recruiters who assess visual hierarchy, performance, technical sophistication, code craft, and responsiveness.
+Accessed on desktop and mobile viewports by engineering evaluators seeking dense, verifiable proof of technical competence, publication-grade research clarity, and pristine frontend craftsmanship.
 
 ## Capabilities and Constraints
-- High-performance, zero-bloat vanilla web architecture (Semantic HTML5, Modern CSS custom properties, ES6+ JavaScript, Canvas/WebGL interactive visualizer).
-- Preserves all real facts: Education (Universitas Pendidikan Ganesha), Certifications (IBM Data Science, Belajar Skill Python for DS, TOEFL ITP® Score 530), verified organizational experience, CV download, and authentic contact links.
-- Silky 60fps interactive animations, responsive fluid layout across mobile, tablet, desktop, and ultra-wide.
-- Strict accessibility (a11y) contrast standards, keyboard navigability, and `prefers-reduced-motion` support.
+- 100% Frontend-only static architecture (zero backend, zero database, zero external dependencies).
+- Strictly dark-first visual system: near-black ground (`#090a0d`), off-white typography (`#f3f4f6`), muted gray surfaces (`#12151c`), hairline borders (`rgba(255, 255, 255, 0.08)`), subtle grid/noise texture, and one restrained cobalt accent (`#3b82f6`).
+- Preserves all authentic facts: Putu Wahyu Satya Giridharma (Ash), Universitas Pendidikan Ganesha, TOEFL ITP® Score 530, IBM Data Science Professional, Belajar Skill Python, authentic experience and toolchain.
+- No generic gradients, no glassmorphism, no neon glows, no stock photos, no AI brain graphics, no heavy 3D canvases.
 
 ## Brand Commitments
-- Identity: Wahyu Satya (WS)
-- Professional Focus: Senior Web Developer & Deep Learning Researcher
-- Aesthetic Voice: High-density computational intelligence, dark sci-fi / research laboratory atmosphere with luminous neural violet and cyber-cyan accents, clean geometric typography, glassmorphic HUD telemetry, interactive network topologies.
+- Identity: Ash (Putu Wahyu Satya Giridharma)
+- Positioning: Web Developer • Data Scientist • Deep Learning Researcher
+- Aesthetic Voice: Premium Research Lab, Editorial Minimalist, Technical Precision, Hairline Architecture, Monospace Telemetry.
 
 ## Evidence on Hand
-- Profile image (`assets/profile-pic.png`)
-- About image (`assets/about-pic.png`)
-- Favicon icon (`assets/icon.png`)
-- Verified certificates (`assets/certi-1.png`, `assets/certi-2.png`, `assets/certi-3.png`)
-- CV resume document (`assets/ws-cv-resume.pdf`)
-- Active social links: LinkedIn (`wahyusatya`), GitHub (`wahyusatya`), Email (`satyagiridharma@gmail.com`)
+- Profile image (`public/assets/profile-pic.png`)
+- Verified certificates (`public/assets/certi-1.png`, `public/assets/certi-2.png`, `public/assets/certi-3.png`)
+- CV resume document (`public/assets/ws-cv-resume.pdf`)
+- ToolChain assets (`public/assets/ToolChain/`)
+- Verified contact & social profiles: GitHub, LinkedIn, Email.
 
 ## Product Principles
-1. **Demonstrate Intelligence Live:** Integrate interactive neural canvas visualizers, dynamic tensor matrices, loss-curve metrics, and live code playground elements.
-2. **Senior Web Engineering Standards:** Fluid fluid-type scales, magnetic interactive elements, custom scroll progress telemetry, responsive masonry/grid structures, zero layout shifts.
-3. **Research-Grade Showcase:** Frame certifications, experience, and deep learning projects with academic clarity: methodology, architecture stacks, hyperparameters, and live interactive demos.
-4. **Performance & Accessibility First:** Instant asset loading, semantic ARIA landmarks, WCAG-compliant color contrast, and seamless mobile touch interactions.
+1. **Editorial & Mathematical Clarity:** Structure content like a premium computer science research lab index — clear typography, strict hierarchy, and exact technical metrics.
+2. **Deterministic Frontend Architecture:** Lightweight, lightning-fast, accessible, and responsive.
+3. **Subtle Engineering Craft:** Precision hairline borders, subtle mathematical grid textures, and generous whitespace.
+4. **Authenticity Over Hype:** Concrete architectures, actual formulas, reproducible code snippets, and verified credentials.

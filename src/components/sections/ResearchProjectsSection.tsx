@@ -1,101 +1,155 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Play, ExternalLink, Cpu, Layers } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Github, ExternalLink } from 'lucide-react';
 import { PORTFOLIO_DATA, Project } from '../../data/portfolioData';
-import { useToast } from '../ui/ToastContext';
+import { ProjectVisualPreview } from '../ui/ProjectVisualPreview';
+import { CaseStudyModal } from '../ui/CaseStudyModal';
+
+type FilterType = 'all' | 'web' | 'data' | 'ai' | 'research';
 
 export const ResearchProjectsSection: React.FC = () => {
-  const { showToast } = useToast();
+  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const handleSyncWeights = (projectTitle: string) => {
-    showToast(`📦 Live telemetry weights for [${projectTitle}] synced via HuggingFace hub.`, 'info');
-  };
+  const filters: { id: FilterType; label: string }[] = [
+    { id: 'all', label: 'All Projects' },
+    { id: 'web', label: 'Web' },
+    { id: 'data', label: 'Data' },
+    { id: 'ai', label: 'AI' },
+    { id: 'research', label: 'Research' },
+  ];
+
+  const filteredProjects = PORTFOLIO_DATA.projects.filter(
+    (proj: Project) => activeFilter === 'all' || proj.filterCategories.includes(activeFilter)
+  );
 
   return (
-    <section id="projects" className="relative py-24 max-w-7xl mx-auto px-4 sm:px-6">
-      <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-          Selected Research & Engineering Projects
-        </h2>
-        <p className="text-sm sm:text-base text-slate-400">
-          Applied deep learning research and high-performance web systems engineered for tangible real-world impact.
-        </p>
-      </div>
+    <section id="work" className="py-24 border-b border-hairline relative">
+      <div id="research" className="absolute -top-16" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="space-y-2">
+            <span className="font-mono text-xs text-accent-primary uppercase tracking-widest">
+              CASE STUDIES & RESEARCH SYSTEMS
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-text tracking-tight">
+              Selected Projects & Technical Case Studies
+            </h2>
+            <p className="text-sm text-slate-muted max-w-2xl font-sans">
+              In-depth engineering breakdowns of neural vision architectures, high-throughput canvas systems, and statistical telemetry models.
+            </p>
+          </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {PORTFOLIO_DATA.projects.map((proj: Project, idx: number) => (
-          <motion.article
-            key={proj.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="p-6 rounded-3xl bg-bg-surface/80 border border-white/10 backdrop-blur-md flex flex-col justify-between space-y-5 hover:border-cyan-primary/50 transition-all hover:-translate-y-1.5 shadow-lg hover:shadow-cyan-primary/10"
-          >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[11px] font-semibold text-cyan-glow bg-cyan-primary/10 border border-cyan-primary/30 px-2.5 py-0.5 rounded-full">
-                  {proj.category}
-                </span>
-                <span className="font-mono text-xs text-slate-400">{proj.year}</span>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-slate-100 mb-2">{proj.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  {proj.summary}
-                </p>
-              </div>
-
-              {/* Architecture Meta Specs */}
-              <div className="p-3.5 rounded-xl bg-bg-deep border border-white/5 space-y-2 text-xs">
-                <div className="flex justify-between gap-2">
-                  <span className="font-mono text-slate-400 shrink-0">Architecture:</span>
-                  <span className="text-slate-200 text-right font-medium">{proj.architecture}</span>
-                </div>
-                <div className="flex justify-between gap-2">
-                  <span className="font-mono text-slate-400 shrink-0">Framework:</span>
-                  <span className="text-slate-200 text-right font-medium">{proj.framework}</span>
-                </div>
-                <div className="flex justify-between gap-2">
-                  <span className="font-mono text-slate-400 shrink-0">Evaluation:</span>
-                  <span className="text-emerald-primary text-right font-semibold">{proj.metric}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Footer Actions */}
-            <div className="pt-3 border-t border-white/5 flex items-center justify-between gap-3">
-              <a
-                href={proj.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-bg-deep hover:bg-white/5 border border-white/10 text-xs font-semibold text-slate-200 hover:text-white transition-colors"
+          {/* Filter Bar */}
+          <div className="flex items-center gap-1 bg-bg-surface p-1 rounded border border-hairline shrink-0">
+            {filters.map((f) => (
+              <button
+                key={f.id}
+                onClick={() => setActiveFilter(f.id)}
+                className={`px-3 py-1.5 rounded text-xs font-mono tracking-wide transition-all cursor-pointer ${
+                  activeFilter === f.id
+                    ? 'bg-bg-ground text-slate-text font-bold border border-hairline shadow-sm'
+                    : 'text-slate-dim hover:text-slate-muted'
+                }`}
               >
-                <Github className="w-3.5 h-3.5" />
-                <span>Code Repository</span>
-              </a>
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
-              {proj.id === 'proj-2' ? (
-                <a
-                  href="#lab"
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-cyan-primary/20 hover:bg-cyan-primary/30 border border-cyan-primary/40 text-xs font-semibold text-cyan-glow transition-all"
-                >
-                  <Play className="w-3.5 h-3.5" />
-                  <span>Try in Lab</span>
-                </a>
-              ) : (
-                <button
-                  onClick={() => handleSyncWeights(proj.title)}
-                  className="px-3 py-1.5 rounded-xl bg-transparent hover:bg-white/5 text-xs font-medium text-slate-400 hover:text-slate-200 transition-colors cursor-pointer"
-                >
-                  Model Specs
-                </button>
-              )}
-            </div>
-          </motion.article>
-        ))}
+        {/* Large Editorial Project Panels */}
+        <div className="space-y-6">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((proj: Project) => (
+              <motion.article
+                key={proj.id}
+                layout
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.25 }}
+                onClick={() => setSelectedProject(proj)}
+                className="group p-6 sm:p-8 rounded-lg bg-bg-surface border border-hairline hover:border-subtle transition-all duration-200 cursor-pointer"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  {/* Left: Project Details */}
+                  <div className="lg:col-span-7 space-y-4">
+                    {/* Header Row: Number, Category & Status */}
+                    <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
+                      <span className="text-accent-primary font-bold text-sm">
+                        {proj.number}
+                      </span>
+                      <span className="text-slate-dim">/</span>
+                      <span className="text-slate-muted uppercase tracking-wider">
+                        {proj.category}
+                      </span>
+                      <span className="text-slate-dim">•</span>
+                      <span className="text-slate-dim text-[11px]">
+                        {proj.year}
+                      </span>
+                      <span className="ml-auto px-2 py-0.5 rounded bg-bg-ground border border-hairline/60 text-slate-dim text-[10px]">
+                        {proj.status}
+                      </span>
+                    </div>
+
+                    {/* Title & Summary */}
+                    <div className="space-y-2">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-text group-hover:text-accent-primary transition-colors tracking-tight">
+                        {proj.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-muted leading-relaxed font-sans">
+                        {proj.summary}
+                      </p>
+                    </div>
+
+                    {/* Architecture Brief */}
+                    <div className="p-3 rounded bg-bg-ground border border-hairline/60 font-mono text-xs text-slate-dim">
+                      <span className="text-slate-muted font-medium">Architecture: </span>
+                      <span>{proj.architectureBrief}</span>
+                    </div>
+
+                    {/* Technologies & Hover Action */}
+                    <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-hairline/40">
+                      {/* Tech Chips */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {proj.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="font-mono text-[10px] px-2 py-0.5 rounded bg-bg-ground border border-hairline text-slate-dim"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* View Case Study Hover Prompt */}
+                      <div className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-muted group-hover:text-accent-primary transition-colors">
+                        <span>View Case Study</span>
+                        <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Interactive Wireframe / Visual Preview */}
+                  <div className="lg:col-span-5 h-full flex flex-col justify-center">
+                    <ProjectVisualPreview type={proj.visualType} />
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
+
+      {/* Client-Side Case Study Inspection Modal */}
+      {selectedProject && (
+        <CaseStudyModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 };
